@@ -1,0 +1,6 @@
+ctrl + shift + ` 터미널 열고
+
+과제 폴더에서 다음 세줄 치기
+git add ./
+git commit -m "Update"
+git push
