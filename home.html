@@ -5,7 +5,7 @@
         <title>My Website</title>
         <style>
             body {
-                background-image: url("back.jpg");
+                background-image: url("media/back.jpg");
                 background-color: white;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
@@ -14,6 +14,8 @@
 
             nav {
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             h1 {
@@ -28,10 +30,28 @@
                 border: 20px;
                 padding: 20px;
             }
-
-            span {
-                display: block;
-                margin: auto;
+            figure {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            figcaption {
+                font-size: 25px;
+            }
+            figcaption:hover{
+                background: #2c2cf6;
+            
+            }
+            figcaption:active{
+                background: #FF00FF;
+            }
+            a{
+                text-decoration: none;
+                color:black
+            }
+            a:hover{
+                color:white;
             }
         </style>
     </head>
@@ -42,16 +62,37 @@
         </header>
         <nav>
             <figure>
+                <a href="playlist.html" target="_self">
                 <img src="media/headphone.png" />
-                <figcaption>playlist</figcaption>
+                <figcaption>playlist</a></figcaption>
             </figure>
-           <figure> <img src="media/vinyl.png" /> genre
-            <img src="media/guitar.png" /> artist
-        </nav>
-        <nav>
-            <img src="media/post.png" /> posting
-            <img src="media/user.png" /> profile
-            <img src="media/contact.png" /> contact
+            
+            <figure>
+                <a href="genre.html" target="_self">
+                <img src="media/vinyl.png" />
+                <figcaption>genre</a></figcaption>
+            </figure>
+            <figure> 
+                <a href="artist.html" target="_self">
+                <img src="media/guitar.png" />
+                <figcaption>artist</a></figcaption>
+            </figure>
+            <figure>
+                <a href="posting.html" target="_self">
+                <img src="media/post.png" />
+                <figcaption>posting</a></figcaption>
+            </figure>
+
+            <figure>
+                <a href="profile.html" target="_self">
+                <img src="media/user.png" />
+                <figcaption>profile</a></figcaption>
+            </figure>
+            <figure>
+                <a href="contact.html" target="_self">
+                    <img src="media/contact.png" />
+                    <figcaption>contact</a></figcaption>
+            </figure>
         </nav>
     </body>
 </html>
