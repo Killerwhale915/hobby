@@ -37,37 +37,62 @@
                 border-color: black;
             }
 
+            td > a {
+                color: #ff00ff;
+            }
             img {
                 width: 180px;
+            }
+            thead {
+                background-color: grey;
+            }
+            tbody tr :nth-child(odd) {
+                background: grey;
             }
         </style>
     </head>
     <body>
-        <h3><a href="home.html" target="_self">⬅️back</a></h3>
+        <h3><a href="index.html" target="_self">⬅️back</a></h3>
         <h1>Profile</h1>
 
         <table border="5">
-            <th colspan="2">김지우</th>
-            <tr>
-                <td colspan="2"><img src="media/selfy.jpg" /></td>
-            </tr>
-            <tr>
-                <td>성별</td>
-                <td>여자</td>
-            </tr>
-            <tr>
-                <td>생년월일</td>
-                <td>2003년 09월 15일</td>
-            </tr>
-            <tr>
-                <td>학력</td>
-                <td>덕성여자대학교 수학과</td>
-            </tr>
-            <tr>
-                <td>좋아하는 음식</td>
-                <td>떡볶이</td>
-            </tr>
-            <tf> <td colspan="2">SNS</td></tf>
+            <thead>
+                <th colspan="2">김지우</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" style="background-color: white">
+                        <img src="media/selfy.jpg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>여자</td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td>2003년 09월 15일</td>
+                </tr>
+                <tr>
+                    <td>학력</td>
+                    <td>덕성여자대학교 수학과</td>
+                </tr>
+                <tr>
+                    <td>좋아하는 음식</td>
+                    <td>떡볶이</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tf>
+                    <td colspan="2">
+                        <a
+                            href="https://www.instagram.com/killerwhale915/"
+                            target="_blank"
+                            >INSTARGRAM</a
+                        >
+                    </td></tf
+                >
+            </tfoot>
         </table>
     </body>
 </html>

@@ -14,7 +14,7 @@
             h1 {
                 text-align: center;
                 font-size: 70px;
-                margin-bottom: 70px;
+                margin-bottom: 30px;
                 margin-top: 10px;
             }
             h3 {
@@ -25,6 +25,22 @@
                 color: black;
                 visited: Black;
             }
+            li {
+                text-align: center;
+                font-size: 30px;
+            }
+            ul > a :hover {
+                background-color: black;
+                color: white;
+            }
+            ul {
+                list-style: square;
+            }
+            section {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -32,11 +48,25 @@
             <h3><a href="home.html" target="_self">⬅️back</a></h3>
             <h1>Genre</h1>
         </header>
+        <section>- 주인장이 좋아하는 장르 리스트 -</section>
         <nav>
             <ul>
-                <li>얼터너티브</li>
-                <li>뉴에이지</li>
-                <li>퓨처베이스</li>
+                <a href="Alternative.html" target="_self"
+                    ><li>Alternative</li></a
+                >
+
+                <br />
+                <a href="https://ko.wikipedia.org/wiki/뉴에이지" target="_self">
+                    <li>New Age</li></a
+                >
+                <br />
+
+                <a
+                    href="https://ko.wikipedia.org/wiki/퓨처_베이스"
+                    target="_blank"
+                    ><li>Future Bass</li></a
+                >
+                <br />
             </ul>
         </nav>
     </body>

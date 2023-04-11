@@ -14,7 +14,7 @@
             h1 {
                 text-align: center;
                 font-size: 70px;
-                margin-bottom: 70px;
+                margin-bottom: 10px;
                 margin-top: 10px;
             }
             h3 {
@@ -25,10 +25,55 @@
                 color: black;
                 visited: Black;
             }
+            ul {
+                list-style: square;
+            }
+            div > span {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            div > ul > span {
+                font-size: 35px;
+                font-weight: bold;
+            }
+            li {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+            section {
+                text-align: center;
+            }
+            ul > a :hover {
+                background-color: black;
+                color: white;
+            }
         </style>
     </head>
     <body>
-        <h3><a href="home.html" target="_self">⬅️back</a></h3>
-        <h1>Artist</h1>
+        <header>
+            <h3><a href="home.html" target="_self">⬅️back</a></h3>
+            <br />
+            <h1>Artist</h1>
+        </header>
+
+        <section>
+            <div>
+                <span>- 장르별 아티스트 추천 -</span>
+                <ul>
+                    <span>Alternative & Pop</span>
+                    <a href=""><li>Yorushika</li></a>
+                    <a href=""><li>Ofiicial Hige Dandism</li></a>
+                    <br />
+                    <span>Future Bass</span>
+                    <a href=""><li>Snail's house</li></a>
+                    <br />
+                    <span>New Age</span>
+                    <a href=""> <li>A hisa</li></a>
+                    <a href=""><li>Sereno</li></a>
+                    <br />
+                </ul>
+            </div>
+        </section>
     </body>
 </html>
