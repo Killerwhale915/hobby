@@ -32,11 +32,16 @@ function loadData() {
         var logElement = document.getElementById("log");
         for (var i = 0; i < postData.length; i++) {
             logElement.innerHTML +=
-                "이름: " +
+                "<br><br>Nickname : " +
                 postData[i].name +
                 "<br>글 내용 : " +
                 postData[i].text +
                 "<br><br>";
         }
     }
+}
+function clearData() {
+    localStorage.removeItem("postData");
+    var logElement = document.getElementById("log");
+    logElement.innerHTML = "";
 }
