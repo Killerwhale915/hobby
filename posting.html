@@ -39,18 +39,24 @@
             }
         </style>
     </head>
-    <body>
-        <form action="form.php" method="get">
-            <label for="name">이름:</label>
-            <input type="text" id="name" name="name" /><br /><br />
-            <label for="text">내용:</label>
-            <textarea id="text" name="text"></textarea><br /><br />
-            <input type="submit" value="제출" />
-        </form>
 
-        <h2>제출된 내용</h2>
-        <div id="log">
-            <?php include("form.php"); ?>
-        </div>
+    <body onload="loadData()">
+        <header>
+            <h3><a href="index.html" target="_self">⬅️back</a></h3>
+            <h1>Posting</h1>
+        </header>
+        <section>
+            <form action="submit-form.php">
+                <label for="name">이름:</label>
+                <input type="text" id="name" name="name" /><br /><br />
+
+                <label for="text">글을 써주세요:</label>
+                <input type="text" id="text" name="text" /><br /><br />
+                <button type="button" onclick="submitForm()">제출하기</button>
+            </form>
+            <div id="log"></div>
+            <script src="posting.js"></script>
+            <button onclick="clearData()">모든 글 삭제</button>
+        </section>
     </body>
 </html>
