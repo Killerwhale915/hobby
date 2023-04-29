@@ -26,7 +26,9 @@
             a {
                 text-decoration: none;
                 color: black;
-                visited: Black;
+            }
+            a:visited {
+                color: black;
             }
             ul {
                 list-style: square;
@@ -38,7 +40,6 @@
 
             li {
                 font-size: 25px;
-                margin-bottom: 10px;
             }
             section {
                 text-align: center;
@@ -49,8 +50,12 @@
                 font-weight: bold;
             }
 
-            article > a :hover {
+            ul li:hover {
                 background-color: black;
+                color: white;
+            }
+
+            li:hover a {
                 color: white;
             }
         </style>
@@ -60,48 +65,64 @@
             <h3><a href="index.html" target="_self">⬅️back</a></h3>
             <h1>Artist</h1>
         </header>
-
         <section>
             <div>
                 <span>- 장르별 아티스트 추천 -</span>
-                <ul>
-                    <article>
-                        <span>J-Pop</span>
-                        <a href="https://www.youtube.com/@nbuna" target="_blank"
-                            ><li>Yorushika</li></a
-                        >
-                        <a
-                            href="https://www.youtube.com/@officialhigedandism"
-                            target="_blank"
-                            ><li>Ofiicial Hige Dandism</li></a
-                        >
-                        <br />
-                    </article>
-                    <article>
-                        <span>Future Bass</span>
-                        <a
-                            href="https://www.youtube.com/@ujicosnail"
-                            target="_blank"
-                            ><li>Snail's house</li></a
-                        >
-                        <br />
-                    </article>
-                    <article>
-                        <span>New Age</span>
-                        <a
-                            href="https://www.youtube.com/@a_hisa"
-                            target="_blank"
-                        >
-                            <li>A hisa</li></a
-                        >
-                        <a
-                            href="https://www.youtube.com/@Sereno"
-                            target="_blank"
-                            ><li>Sereno</li></a
-                        >
-                        <br />
-                    </article>
-                </ul>
+                <br />
+                <br />
+                <article>
+                    <span>J-Pop</span>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.youtube.com/@nbuna"
+                                target="_blank"
+                                >Yorushika</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.youtube.com/@officialhigedandism"
+                                target="_blank"
+                                >Ofiicial Hige Dandism</a
+                            >
+                        </li>
+                    </ul>
+                    <br />
+                </article>
+                <article>
+                    <span>Future Bass</span>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.youtube.com/@ujicosnail"
+                                target="_blank"
+                                >Snail's house</a
+                            >
+                        </li>
+                    </ul>
+                    <br />
+                </article>
+                <article>
+                    <span>New Age</span>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.youtube.com/@a_hisa"
+                                target="_blank"
+                                >A hisa</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.youtube.com/@Sereno"
+                                target="_blank"
+                                >Sereno</a
+                            >
+                        </li>
+                    </ul>
+                    <br />
+                </article>
             </div>
         </section>
     </body>

@@ -29,7 +29,7 @@ function loadData() {
         var logElement = document.getElementById("log");
         for (var i = 0; i < postData.length; i++) {
             logElement.innerHTML +=
-                "<br><br>Nickname : " +
+                "<br><br>이름 : " +
                 postData[i].name +
                 "<br>글 내용 : " +
                 postData[i].text +

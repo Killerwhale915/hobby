@@ -11,20 +11,27 @@
                 background-repeat: no-repeat;
                 background-position: center;
             }
+
             h1 {
                 text-align: center;
                 font-size: 70px;
                 margin-bottom: 70px;
                 margin-top: 10px;
             }
+
             h3 {
                 font-size: 25px;
             }
+
             a {
                 text-decoration: none;
                 color: black;
-                visited: Black;
             }
+
+            a:visited {
+                color: black;
+            }
+
             section {
                 text-align: left;
                 margin-left: 10px;
@@ -32,13 +39,14 @@
             }
         </style>
     </head>
+
     <body onload="loadData()">
         <header>
             <h3><a href="index.html" target="_self">⬅️back</a></h3>
             <h1>Posting</h1>
         </header>
         <section>
-            <form>
+            <form action="submit-form.php">
                 <label for="name">이름:</label>
                 <input type="text" id="name" name="name" /><br /><br />
 
@@ -48,7 +56,6 @@
             </form>
             <div id="log"></div>
             <script src="posting.js"></script>
-            <div id="log"></div>
             <button onclick="clearData()">모든 글 삭제</button>
         </section>
     </body>
