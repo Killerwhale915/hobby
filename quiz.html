@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Quiz</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"
+        ></script>
+        <script src="Quiz.js"></script>
+        <style>
+            body {
+                background-image: url("media/back.jpg");
+                background-color: white;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            h1 {
+                text-align: center;
+                font-size: 70px;
+                margin-bottom: 30px;
+                margin-top: 10px;
+            }
+            h3 {
+                font-size: 25px;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            a:visited {
+                color: black;
+            }
+            section {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3><a href="index.html" target="_self">⬅️back</a></h3>
+            <h1>Quiz</h1>
+        </header>
+
+        <!--JQuery 여기서 사용했습니다!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <section>
+            <p class="hello">버튼을 눌러보세요!</p>
+            <button class="btn">버튼</button>
+            <script>
+                $(".btn").on("click", function () {
+                    $(".hello").fadeOut();
+                });
+            </script>
+        </section>
+
+        <br /><br />
+        <br /><br />
+        <section id="quizSection">
+            <p>다이아가 죽으면?</p>
+            <input type="text" id="answer1" />
+            <!--사용자가 입력한 값을 함수로 넘겨 정답이 맞는지 확인한다 -->
+            <button onclick="checkAnswer1()">제출</button>
+            <br /><br />
+        </section>
+    </body>
+</html>

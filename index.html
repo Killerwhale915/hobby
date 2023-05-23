@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <title>My Website</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="ABC.js"></script>
         <style>
             body {
                 background-image: url("media/back.jpg");
@@ -56,6 +58,9 @@
             a:hover{
                 color:white;
             }
+            .pointer{
+                cursor:pointer;
+            }
             
 
         </style>
@@ -67,37 +72,46 @@
         </header>
         <nav>
             <figure>
-                <a href="javascript:alert('페이지 준비중입니다.')">
+                <!--클릭 시 경고창을 표시한다-->
+                <a onclick=playlist() class="pointer">
                 <img src="media/headphone.png" />
-                <figcaption>playlist</a></figcaption>
+                <figcaption>Playlist</a></figcaption>
             </figure>
             
             <figure>
                 <a href="genre.html" target="_self">
                 <img src="media/vinyl.png" />
-                <figcaption>genre</a></figcaption>
+                <figcaption>Genre</a></figcaption>
             </figure>
             <figure> 
                 <a href="artist.html" target="_self">
                 <img src="media/guitar.png" />
-                <figcaption>artist</a></figcaption>
+                <figcaption>Artist</a></figcaption>
             </figure>
             <figure>
                 <a href="posting.html" target="_self">
                 <img src="media/post.png" />
-                <figcaption>posting</a></figcaption>
+                <figcaption>Posting</a></figcaption>
             </figure>
 
             <figure>
                 <a href="profile.html" target="_self">
                 <img src="media/user.png" />
-                <figcaption>profile</a></figcaption>
+                <figcaption>Profile</a></figcaption>
+            </figure>
+            <figure>
+                <!-- 마우스 클릭 시 페이지 이동할건지 질문한다 -->
+                <a target="_self" onclick=enterQuiz() class="pointer">
+                    <img src="media/quiz.png"  />
+                    <figcaption >Quiz</a></figcaption>
             </figure>
             <figure>
                 <a href="contact.html" target="_self">
                     <img src="media/contact.png" />
-                    <figcaption>contact</a></figcaption>
+                    <figcaption>Contact</a></figcaption>
             </figure>
+          
+                
         </nav>
     </body>
 </html>
