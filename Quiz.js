@@ -38,7 +38,7 @@ function checkAnswer3() {
         numCorrectAnswers++;
         NextQuestion();
         quizSection.innerHTML =
-            '<a href="index.html" target="_self">메인으로 이동하기</a>';
+            '<a href="index.html" target="_self">홈으로 이동하려면 클릭하세요</a>';
     } else {
         alert("틀렸습니다. 다시 시도해보세요.");
     }
