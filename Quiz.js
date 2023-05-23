@@ -7,7 +7,6 @@ let numCorrectAnswers = 0;
 //첫번째 문제의 정답을 확인하는 함수
 function checkAnswer1() {
     const userAnswer = document.getElementById("answer1").value.trim();
-
     if (userAnswer === correctAnswer1) {
         alert("정답입니다!");
         numCorrectAnswers++;
@@ -49,17 +48,22 @@ function checkAnswer3() {
 function NextQuestion() {
     const quizSection = document.getElementById("quizSection");
 
+    //typescript hint2()사용함
     if (numCorrectAnswers === 1) {
         quizSection.innerHTML = `
             <p>왕이 넘어지면?</p>
             <input type="text" id="answer2" />
             <button onclick="checkAnswer2()">제출</button>
+            <button onclick="hint2()">힌트</button>
         `;
-    } else if (numCorrectAnswers === 2) {
+    }
+    //typescript hint3()사용함
+    else if (numCorrectAnswers === 2) {
         quizSection.innerHTML = `
             <p>뱀이 불에 타면?</p>
             <input type="text" id="answer3" />
             <button onclick="checkAnswer3()">제출</button>
+            <button onclick="hint3()">힌트</button>
         `;
     } else {
         alert("축하합니다! 모든 문제를 맞추셨습니다!");

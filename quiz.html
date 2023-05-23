@@ -3,11 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <title>Quiz</title>
+        <!--jQuery-->
         <script
             src="https://code.jquery.com/jquery-3.7.0.min.js"
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
             crossorigin="anonymous"
         ></script>
+        <!--TypeScript-->
+        <script src="ABC1.js"></script>
+
         <script src="Quiz.js"></script>
         <style>
             body {
@@ -46,24 +50,30 @@
             <h1>Quiz</h1>
         </header>
 
-        <!--JQuery 여기서 사용했습니다!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <!--JQuery 여기서 사용했습니다-->
         <section>
-            <p class="hello">버튼을 눌러보세요!</p>
-            <button class="btn">버튼</button>
+            <p class="A">jQurey 사용해봄!</p>
+            <button class="btn1">Fade In</button>
+            <button class="btn2">Fade Out</button>
             <script>
-                $(".btn").on("click", function () {
-                    $(".hello").fadeOut();
+                $(".btn1").on("click", function () {
+                    $(".A").fadeOut();
+                });
+
+                $(".btn2").on("click", function () {
+                    $(".A").fadeIn();
                 });
             </script>
         </section>
+        <br /><br />
 
-        <br /><br />
-        <br /><br />
         <section id="quizSection">
             <p>다이아가 죽으면?</p>
             <input type="text" id="answer1" />
             <!--사용자가 입력한 값을 함수로 넘겨 정답이 맞는지 확인한다 -->
             <button onclick="checkAnswer1()">제출</button>
+            <!--typescript hint1()사용함 -->
+            <button onclick="hint1()">힌트</button>
             <br /><br />
         </section>
     </body>
