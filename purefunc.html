@@ -4,6 +4,10 @@
         <meta charset="UTF-8" />
         <title>Pure function의 사용</title>
         <script>
+            src = "https://code.jquery.com/jquery-3.7.0.min.js";
+            integrity = "sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=";
+            crossorigin = "anonymous";
+
             //a와 b를 더하는 함수
             function addNumbers(a, b) {
                 return a + b;
@@ -13,11 +17,21 @@
             function getMaxNumber(a, b) {
                 return Math.max(a, b);
             }
+
+            //두 문자열을 결합하는 함수
+            function concatenateStrings(str1, str2) {
+                return str1 + str2;
+            }
+
             function displayResults() {
                 const sum = addNumbers(5, 3);
-                const maxNumber = getMaxNumber(8, 3);
+                const maxNumber = getMaxNumber(8, ~3);
+                const text1 = "Hello, ";
+                const text2 = "World!";
+                const textresult = concatenateStrings(text1, text2);
                 document.getElementById("sumResult").textContent = sum;
                 document.getElementById("MaxResult").textContent = maxNumber;
+                document.getElementById("textResult").textContent = textresult;
             }
 
             // displayResults 함수 실행
@@ -70,5 +84,36 @@
                 <span id="MaxResult"></span>
             </p>
         </section>
+        <section>
+            <p>결과 : <span id="textResult"></span></p>
+        </section>
+        <h1>AJAX Example</h1>
+        <button onclick="loadData()">Load Data</button>
+        <div id="data-container"></div>
+
+        <script>
+            function loadData() {
+                $.ajax({
+                    url: "data.json",
+                    dataType: "json",
+                    success: function (data) {
+                        displayData(data);
+                    },
+                    error: function () {
+                        console.log("Error occurred while loading data.");
+                    },
+                });
+            }
+
+            function displayData(data) {
+                var container = $("#data-container");
+                container.empty();
+
+                $.each(data, function (index, item) {
+                    var listItem = $("<li>").text(item);
+                    container.append(listItem);
+                });
+            }
+        </script>
     </body>
 </html>
