@@ -87,33 +87,5 @@
         <section>
             <p>결과 : <span id="textResult"></span></p>
         </section>
-        <h1>AJAX Example</h1>
-        <button onclick="loadData()">Load Data</button>
-        <div id="data-container"></div>
-
-        <script>
-            function loadData() {
-                $.ajax({
-                    url: "data.json",
-                    dataType: "json",
-                    success: function (data) {
-                        displayData(data);
-                    },
-                    error: function () {
-                        console.log("Error occurred while loading data.");
-                    },
-                });
-            }
-
-            function displayData(data) {
-                var container = $("#data-container");
-                container.empty();
-
-                $.each(data, function (index, item) {
-                    var listItem = $("<li>").text(item);
-                    container.append(listItem);
-                });
-            }
-        </script>
     </body>
 </html>
