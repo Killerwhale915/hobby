@@ -36,47 +36,34 @@
         </style>
     </head>
     <body>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $.ajax({
+                type: "GET",
+                url: "https://dapi.kakao.com/v2/search/image",
+                data: { query: "apple" },
+                headers: {
+                    Authorization: "KakaoAK 176f4790a230c5cfa89f464f21a5dced",
+                },
+            }).done(function (datas) {
+                console.log(datas.documents[0]);
+
+                $("p").append(
+                    "<img src='" + datas.documents[0].image_url + "'/>"
+                );
+            });
+        </script>
+
         <header>
             <h3><a href="index.html" target="_self">⬅️back</a></h3>
             <h1>Ajax 사용</h1>
         </header>
-        <section id="response"></section>
-
-        <!-- jQuery -->
-        <script
-            src="https://code.jquery.com/jquery-3.7.0.min.js"
-            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-            crossorigin="anonymous"
-        ></script>
-        <script>
-            $(document).ready(function () {
-                function kogptApi(prompt, maxTokens, temperature) {
-                    $.ajax({
-                        method: "POST",
-                        url: "https://api.kakaobrain.com/v1/inference/kogpt/generation",
-                        data: JSON.stringify({
-                            prompt: prompt,
-                            max_tokens: maxTokens,
-                            temperature: temperature,
-                        }),
-                        headers: {
-                            Authorization:
-                                "KakaoAK 176f4790a230c5cfa89f464f21a5dced",
-                            "Content-Type": "application/json",
-                        },
-                    }).done(function (response) {
-                        var generatedText = response.generated_text;
-                        $("#response").text(generatedText);
-                    });
-                }
-
-                // KoGPT API 호출
-                var prompt =
-                    "인간처럼 생각하고, 행동하는 '지능'을 통해 인류가 이제까지 풀지 못했던";
-                var maxTokens = 32;
-                var temperature = 1.0;
-                kogptApi(prompt, maxTokens, temperature);
-            });
-        </script>
+        <section>
+            <p></p>
+        </section>
     </body>
 </html>
